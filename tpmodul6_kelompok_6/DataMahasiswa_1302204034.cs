@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,7 +17,7 @@ namespace tpmodul6_kelompok_6
 		{
 			string fileName = "tp6_1_1302204034.json";
 
-            string jsonString = System.IO.File.ReadAllText(fileName);
+            string jsonString = File.ReadAllText(fileName);
 			DataMahasiswa_1302204034 jsonData = JsonSerializer.Deserialize<DataMahasiswa_1302204034>(jsonString);
 
 			this.nama = jsonData.nama;
